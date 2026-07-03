@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ゆめのへ</title>
+  <style>
+    /* 全体のデザイン設定 */
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fce4ec; /* 薄いピンクの背景 */
+      margin: 0;
+    }
+
+    /* メッセージを囲むカードのデザイン */
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 400px;
+    }
+
+    /* タイトルのデザイン */
+    h1 {
+      color: #d81b60; /* 濃いピンク */
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* メッセージ本文のデザイン */
+    p {
+      color: #333;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /* ハートのデザインとアニメーション設定 */
+    .heart {
+      font-size: 40px;
+      color: #e91e63; /* 鮮やかなピンク */
+      margin-top: 20px;
+      display: inline-block;
+      /* アニメーション名, 時間, 無限に繰り返す */
+      animation: heart_beat 1.5s infinite;
+    }
+
+    /* ハートが鼓動するアニメーションの定義 */
+    @keyframes heart_beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); } /* 1.2倍に大きく */
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>ゆめのへ</h1>
+    <p>愛してるよ</p>
+    <p>これからもよろしくね！</p>
+    <div class="heart">♥️</div>
+  </div>
+
+</body>
+</html>
