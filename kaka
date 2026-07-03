@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゆめのへ❤️</title>
+
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    font-family: "Hiragino Sans","Yu Gothic",sans-serif;
+    background:linear-gradient(180deg,#ffd6e8,#fff5fa);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    text-align:center;
+    background:rgba(255,255,255,0.9);
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    z-index:10;
+}
+
+h1{
+    color:#ff4d88;
+}
+
+p{
+    font-size:18px;
+    color:#555;
+    line-height:1.8;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d88;
+    color:white;
+    font-size:18px;
+}
+
+#secret{
+    display:none;
+    margin-top:20px;
+    color:#ff4d88;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.heart{
+    position:fixed;
+    top:-40px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>ゆめのへ ❤️</h1>
+
+<p>
+いつも本当にありがとう。<br>
+一緒にいられる毎日が幸せです。
+</p>
+
+<button onclick="showMessage()">タップしてね❤️</button>
+
+<div id="secret">
+大好きだよ💖<br>
+これからもずっとよろしくね。
+</div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("secret").style.display="block";
+}
+
+function heart(){
+    const h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=(20+Math.random()*25)+"px";
+    h.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(h);
+
+    setTimeout(()=>{
+        h.remove();
+    },7000);
+}
+
+setInterval(heart,180);
+</script>
+
+</body>
+</html>
